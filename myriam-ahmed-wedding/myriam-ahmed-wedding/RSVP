@@ -1,0 +1,31 @@
+<!-- نموذج تأكيد الحضور (RSVP) -->
+<form action="https://formspree.io/f/mrpezdee" method="POST">
+  
+  <!-- الاسم بالكامل -->
+  <label for="name">الاسم بالكامل:</label>
+  <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكريم">
+
+  <!-- البريد الإلكتروني -->
+  <label for="email">البريد الإلكتروني:</label>
+  <input type="email" id="email" name="email" required placeholder="example@domain.com">
+
+  <!-- حالة الحضور -->
+  <label for="attendance">هل ستشرفنا بالحضور؟</label>
+  <select id="attendance" name="attendance" required>
+    <option value="" disabled selected>اختر إجابتك</option>
+    <option value="Yes">يشرفني الحضور بكل سرور</option>
+    <option value="No">نعتذر عن عدم الحضور</option>
+  </select>
+
+  <!-- عدد المرافقين -->
+  <label for="guests">عدد المرافقين معك:</label>
+  <input type="number" id="guests" name="guests" min="0" max="10" value="0">
+
+  <!-- تهنئة أو ملاحظات إضافية -->
+  <label for="message">رسالة أو تهنئة للعروسين:</label>
+  <textarea id="message" name="message" rows="4" placeholder="اكتب مباركتك هنا..."></textarea>
+
+  <!-- زر الإرسال -->
+  <button type="submit">تأكيد الحضور</button>
+
+</form>

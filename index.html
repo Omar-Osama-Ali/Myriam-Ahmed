@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12110d">
+  <title>AHMED &amp; MYRIAM — Wedding Invitation</title>
+  <meta name="description" content="You are invited to the wedding of Ahmed &amp; Myriam at the Saladin Citadel, Cairo — 1 April 2027, 8:00 PM.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AHMED &amp; MYRIAM — Wedding Invitation">
+  <meta property="og:description" content="1 April 2027 · 8:00 PM · Saladin Citadel, Cairo. Open the invitation and let us know you’re coming.">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <noscript><style>.gate{display:none!important}body.is-locked{overflow:auto!important}</style></noscript>
+
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-locked">
+  <a class="skip" href="#main">Skip to the invitation</a>
+
+  <!-- Shared clip shape: a pointed Cairene arch (used by the map and photo niches) -->
+  <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="archClip" clipPathUnits="objectBoundingBox">
+        <path d="M0,1 L0,0.46 C0,0.27 0.3,0.1 0.5,0 C0.7,0.1 1,0.27 1,0.46 L1,1 Z"/>
+      </clipPath>
+    </defs>
+  </svg>
+
+  <!-- ENTRANCE -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate-half gate-left"></div>
+    <div class="gate-half gate-right"></div>
+
+    <svg class="gate-arch" viewBox="0 0 300 420" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M2,418 L2,196 C2,116 100,40 150,2 C200,40 298,116 298,196 L298,418" />
+      <path d="M12,418 L12,198 C12,126 104,54 150,18 C196,54 288,126 288,198 L288,418" />
+    </svg>
+
+    <div class="gate-content">
+      <p class="bismillah" lang="ar" dir="rtl">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</p>
+      <h2 class="gate-names" id="gateTitle">
+        <span>Ahmed</span><span class="gate-amp" aria-hidden="true">&amp;</span><span class="sr-only">and</span><span>Myriam</span>
+      </h2>
+      <p class="gate-line">You are invited</p>
+      <button class="btn btn--ink" id="enterBtn" type="button">Enter invitation</button>
+    </div>
+  </div>
+
+  <button class="music" id="musicBtn" type="button" aria-pressed="false" aria-label="Background music" data-state="off">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="music-text" id="musicText" aria-hidden="true">Music off</span>
+  </button>
+  <audio id="bgMusic" loop preload="metadata">
+    <source src="assets/song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="page" id="page">
+
+    <!-- HERO -->
+    <header class="hero" id="top">
+      <div class="topbar">
+        <span class="mono" role="img" aria-label="Ahmed and Myriam">A&amp;M</span>
+      </div>
+
+      <div class="hero-inner">
+        <p class="hero-kicker r r1">We are getting married</p>
+        <h1 class="names" id="mainTitle" tabindex="-1">
+          <span class="mask"><span class="r-name n1">Ahmed</span></span>
+          <span class="amp r r2" aria-hidden="true">&amp;</span><span class="sr-only">and</span>
+          <span class="mask"><span class="r-name n2">Myriam</span></span>
+        </h1>
+        <p class="hero-date r r3">
+          <time datetime="2027-04-01T20:00:00+02:00" data-bind="dateLong">1 April 2027</time>
+          <span class="hero-venue">Saladin Citadel, Cairo</span>
+        </p>
+        <div class="scroll-cue r r4" aria-hidden="true"><span>Scroll to discover</span><i></i></div>
+      </div>
+
+      <!-- Citadel skyline: curtain wall, flanking towers, lit gate, distant domes and minarets -->
+      <svg class="skyline" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="gateGlow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0d0c09"/>
+            <stop offset="1" stop-color="#c29a52" stop-opacity=".85"/>
+          </linearGradient>
+          <pattern id="merlons" width="36" height="16" patternUnits="userSpaceOnUse">
+            <rect x="7" y="0" width="22" height="16" fill="#15130f"/>
+          </pattern>
+        </defs>
+
+        <!-- distant silhouette -->
+        <g fill="#342b1e">
+          <path d="M628 214 C628 156 684 130 720 128 C756 130 812 156 812 214 Z"/>
+          <rect x="720" y="104" width="2" height="26"/>
+          <circle cx="721" cy="102" r="3.5"/>
+          <path d="M598 232 C598 204 620 192 640 194 L656 232 Z"/>
+          <path d="M842 232 C842 204 820 192 800 194 L784 232 Z"/>
+          <rect x="596" y="212" width="248" height="90"/>
+          <g>
+            <rect x="542" y="86" width="12" height="190"/>
+            <rect x="537" y="132" width="22" height="5"/>
+            <rect x="537" y="168" width="22" height="5"/>
+            <path d="M541 86 L555 86 L548 40 Z"/>
+          </g>
+          <g>
+            <rect x="886" y="86" width="12" height="190"/>
+            <rect x="881" y="132" width="22" height="5"/>
+            <rect x="881" y="168" width="22" height="5"/>
+            <path d="M885 86 L899 86 L892 40 Z"/>
+          </g>
+        </g>
+
+        <!-- curtain wall -->
+        <rect x="0" y="262" width="1440" height="110" fill="#15130f"/>
+        <rect x="0" y="246" width="1440" height="16" fill="url(#merlons)"/>
+
+        <!-- left tower -->
+        <g fill="#1b1813">
+          <rect x="300" y="190" width="80" height="180"/>
+          <rect x="296" y="172" width="14" height="18"/><rect x="316" y="172" width="14" height="18"/>
+          <rect x="336" y="172" width="14" height="18"/><rect x="356" y="172" width="14" height="18"/>
+          <rect x="376" y="172" width="8" height="18"/>
+        </g>
+        <path d="M333 232 L333 216 A7 7 0 0 1 347 216 L347 232 Z" fill="#d9b46a" opacity=".85"/>
+
+        <!-- right tower -->
+        <g fill="#1b1813">
+          <rect x="1060" y="190" width="80" height="180"/>
+          <rect x="1056" y="172" width="8" height="18"/><rect x="1070" y="172" width="14" height="18"/>
+          <rect x="1090" y="172" width="14" height="18"/><rect x="1110" y="172" width="14" height="18"/>
+          <rect x="1130" y="172" width="14" height="18"/>
+        </g>
+        <path d="M1093 232 L1093 216 A7 7 0 0 1 1107 216 L1107 232 Z" fill="#d9b46a" opacity=".85"/>
+
+        <!-- central gate -->
+        <path d="M686 372 V306 C686 284 704 270 720 252 C736 270 754 284 754 306 V372 Z" fill="url(#gateGlow)"/>
+        <path d="M680 372 V306 C680 280 702 264 720 242 C738 264 760 280 760 306 V372" fill="none" stroke="#2a251c" stroke-width="6"/>
+      </svg>
+    </header>
+
+    <main id="main">
+
+      <!-- DETAILS -->
+      <section class="band stone light" id="details" aria-labelledby="detailsTitle">
+        <div class="wrap">
+          <div class="intro">
+            <h2 id="detailsTitle" class="h2">An evening to remember</h2>
+            <p class="lede">We would be honoured to share our joy with you on this special night. Your presence is the greatest gift.</p>
+          </div>
+
+          <dl class="facts">
+            <div class="fact">
+              <dt>Date</dt>
+              <dd><span data-bind="dateShort">1 April 2027</span><small data-bind="weekday">Thursday</small></dd>
+            </div>
+            <div class="fact">
+              <dt>Time</dt>
+              <dd><span data-bind="time">8:00 PM</span><small>Cairo time</small></dd>
+            </div>
+            <div class="fact">
+              <dt>Venue</dt>
+              <dd><span>Saladin Citadel</span></dd>
+            </div>
+            <div class="fact">
+              <dt>City</dt>
+              <dd><span>Cairo, Egypt</span></dd>
+            </div>
+          </dl>
+
+          <div class="actions center-row">
+            <button class="btn btn--ink" id="calBtn" type="button">Add to Calendar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- COUNTDOWN -->
+      <section class="band night-olive on-dark" id="countdown" aria-labelledby="countTitle">
+        <div class="wrap">
+          <h2 id="countTitle" class="h2 center">Until we celebrate</h2>
+          <div class="count" id="count" role="timer" aria-label="Time remaining until the wedding">
+            <div class="count-cell"><span class="num" id="cDays">00</span><span class="unit">Days</span></div>
+            <div class="count-cell"><span class="num" id="cHours">00</span><span class="unit">Hours</span></div>
+            <div class="count-cell"><span class="num" id="cMinutes">00</span><span class="unit">Minutes</span></div>
+            <div class="count-cell"><span class="num" id="cSeconds">00</span><span class="unit">Seconds</span></div>
+          </div>
+          <p class="count-note center" id="countNote" hidden></p>
+        </div>
+      </section>
+
+      <!-- VENUE -->
+      <section class="band stone sand light" id="venue" aria-labelledby="venueTitle">
+        <div class="wrap venue-grid">
+          <div class="venue-copy">
+            <p class="place-kicker">The venue</p>
+            <h2 id="venueTitle" class="h2 venue-name">Saladin Citadel</h2>
+            <p class="venue-city">Cairo, Egypt</p>
+            <p class="lede">In the heart of Cairo, among walls of history and warm evening light, we celebrate the beginning of a new chapter in our story.</p>
+            <div class="actions">
+              <a class="btn btn--ink" id="mapsBtn" href="https://maps.app.goo.gl/uzpyK4hZpvjFcDH76" target="_blank" rel="noopener">Open in Google Maps</a>
+            </div>
+          </div>
+
+          <div class="map-arch">
+            <svg class="arch-frame" viewBox="0 0 300 400" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path d="M1,399 L1,184 C1,112 96,38 150,1 C204,38 299,112 299,184 L299,399" vector-effect="non-scaling-stroke"/>
+            </svg>
+            <div class="map-frame">
+              <iframe title="Map of Saladin Citadel, Cairo" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Saladin%20Citadel%2C%20Cairo&amp;output=embed"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHOTOGRAPHS: stays hidden until real photos are added in WEDDING_CONFIG.photos -->
+      <section class="band stone light" id="moments" aria-labelledby="momentsTitle" hidden>
+        <div class="wrap">
+          <h2 id="momentsTitle" class="h2 center">Our moments</h2>
+          <div class="niches" id="niches"></div>
+        </div>
+      </section>
+
+      <!-- RSVP -->
+      <section class="band night on-dark" id="rsvp" aria-labelledby="replyTitle">
+        <div class="wrap narrow">
+          <div class="intro center">
+            <h2 id="replyTitle" class="h2">Let us know</h2>
+            <p class="lede">Tell us if you can make it. Your answer is sent to us through WhatsApp.</p>
+          </div>
+
+          <div class="card">
+            <form class="rsvp-form" id="rsvpForm" novalidate>
+              <div class="field">
+                <label class="label" for="fullName">Your name</label>
+                <input class="input" id="fullName" name="name" type="text" autocomplete="name" autocapitalize="words" maxlength="80" aria-describedby="nameError" required>
+                <p class="error" id="nameError" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <span class="label label--q" id="attendLabel">Will you be celebrating with us?</span>
+                <div class="stage" id="stage">
+                  <div class="choices" role="group" aria-labelledby="attendLabel" aria-describedby="attendError">
+                    <button class="choice choice-yes" id="yesBtn" type="button" aria-pressed="false">Yes, I'll be there</button>
+                    <button class="choice choice-no" id="noBtn" type="button" aria-pressed="false">I'm sorry, I can't make it</button>
+                  </div>
+                </div>
+                <p class="nudge" id="nudge" aria-live="polite"></p>
+                <p class="error" id="attendError" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label class="label" for="guests">How many people are coming?</label>
+                <div class="stepper">
+                  <button type="button" id="guestsMinus" aria-label="One fewer person">&minus;</button>
+                  <input id="guests" name="guests" type="number" inputmode="numeric" min="1" max="50" step="1" value="1" aria-describedby="guestsHint guestsError">
+                  <button type="button" id="guestsPlus" aria-label="One more person">+</button>
+                </div>
+                <p class="hint" id="guestsHint">Including yourself.</p>
+                <p class="error" id="guestsError" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label class="label" for="message">A message for the couple <span class="opt">(optional)</span></label>
+                <textarea class="input" id="message" name="message" rows="3" maxlength="400" placeholder="Write a few words"></textarea>
+              </div>
+
+              <button class="btn btn--gold btn--block" type="submit">Send my answer</button>
+            </form>
+
+            <div class="sent" id="sent" hidden tabindex="-1" aria-live="polite">
+              <h3 class="sent-title" id="sentTitle">Your answer is ready.</h3>
+              <p class="sent-text">Please send it in <strong>WhatsApp</strong> to confirm. It only reaches us once you press Send there.</p>
+              <pre class="preview" id="preview"></pre>
+              <div class="actions center-row">
+                <a class="btn btn--gold" id="waLink" href="#" target="_blank" rel="noopener">Open WhatsApp</a>
+                <button class="btn btn--line" id="copyMsgBtn" type="button">Copy message</button>
+                <button class="btn btn--line" id="editBtn" type="button">Edit my answer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHARE -->
+      <section class="band stone sand light" id="share" aria-labelledby="shareTitle">
+        <div class="wrap narrow center">
+          <h2 id="shareTitle" class="h2">Share the invitation</h2>
+          <p class="lede">Send the link to someone who should be there.</p>
+          <div class="actions center-row">
+            <button class="btn btn--ink" id="shareBtn" type="button">Share invitation</button>
+            <button class="btn btn--line" id="copyBtn" type="button">Copy link</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer on-dark">
+      <p class="footer-names">Ahmed &amp; Myriam</p>
+      <p class="footer-line">With love, 2027</p>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

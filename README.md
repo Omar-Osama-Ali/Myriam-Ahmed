@@ -13,16 +13,16 @@ Works as-is on GitHub Pages.
 
 ## Change the details
 Open `script.js` and edit `WEDDING_CONFIG`:
-- `eventDate` – currently `2027-04-01T20:00:00+02:00` (1 April 2027, 8:00 PM, Cairo time). Keep the `+02:00` while Egypt is on standard time on the wedding day; if the date moves into Egypt's summer-time period (from late April), use `+03:00`.
+- `eventDate` – currently `2027-04-10T20:00:00+02:00` (10 April 2027, 8:00 PM, Cairo time). Keep the `+02:00` while Egypt is on standard time on the wedding day; Egyptian daylight saving time starts later in April 2027, so the event remains at `+02:00`.
 - `mapsUrl` – Google Maps link
-- `whatsappNumber` – digits only, international format (`201200140223`)
+- `whatsappNumber` – digits only, international format (`33766983531`)
 - `maxGuests` – most people one answer can include (50)
 - `dodgeLimit` – how many times the "I'm sorry, I can't make it" button steps aside before it can be chosen (2)
 - `photos` – add real photographs, e.g. `{ src: "assets/photos/01.jpg", alt: "Ahmed and Myriam" }`. The "Our moments" section stays hidden until at least one photo is listed.
 
 ## How guests answer
 "Send my answer" checks the form, then opens WhatsApp with a ready-written message to the number above
-(phones open the WhatsApp app, computers open WhatsApp Web). The page only says the answer is *ready*;
+(the same wa.me link opens WhatsApp on supported devices and browsers). The page only says the answer is *ready*;
 it cannot know whether the guest pressed Send in WhatsApp.
 
 ## Add to Calendar

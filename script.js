@@ -3,13 +3,13 @@
    Edit the details here only.
    ========================================================================== */
 const WEDDING_CONFIG = {
-  eventDate: "2027-04-01T20:00:00+02:00",   // 1 April 2027, 8:00 PM Cairo time (UTC+2 on this date)
+  eventDate: "2027-04-10T20:00:00+02:00",   // 10 April 2027, 8:00 PM Cairo time (UTC+2 on this date)
   timeZone: "Africa/Cairo",
   eventDurationMinutes: 180,
   venueName: "Saladin Citadel",
   venueCity: "Cairo, Egypt",
   mapsUrl: "https://maps.app.goo.gl/uzpyK4hZpvjFcDH76",
-  whatsappNumber: "201200140223",           // +20 120 014 0223, international format, digits only
+  whatsappNumber: "33766983531",           // +33 7 66 98 35 31, international format, digits only
   maxGuests: 50,                            // most people one answer can include (the guest counts as one)
   dodgeLimit: 2,                            // how many times the "No" button steps aside
   // Add real photographs here, e.g. { src: "assets/photos/01.jpg", alt: "Ahmed and Myriam" }
@@ -68,6 +68,7 @@ const WEDDING_CONFIG = {
       if (v) el.textContent = v;
     });
     $("#mapsBtn").href = C.mapsUrl;
+    document.querySelectorAll("time[data-bind]").forEach(el => { el.dateTime = C.eventDate; });
   }
 
   /* ---------- countdown ---------- */
@@ -377,10 +378,6 @@ const WEDDING_CONFIG = {
     }
 
     /* WhatsApp */
-    const isMobile = () =>
-      /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ||
-      (navigator.maxTouchPoints > 1 && window.matchMedia("(pointer: coarse)").matches);
-
     function buildMessage(name, guests) {
       const lines = [
         "Wedding Invitation", "",
@@ -392,9 +389,7 @@ const WEDDING_CONFIG = {
       if (note) lines.push(`Message: ${note}`);
       return lines.join("\n");
     }
-    const waUrl = (text, mobile) => mobile
-      ? `https://wa.me/${C.whatsappNumber}?text=${encodeURIComponent(text)}`
-      : `https://web.whatsapp.com/send?phone=${C.whatsappNumber}&text=${encodeURIComponent(text)}`;
+    const waUrl = text => `https://wa.me/${C.whatsappNumber}?text=${encodeURIComponent(text)}`;
 
     form.addEventListener("submit", e => {
       e.preventDefault();
@@ -402,10 +397,9 @@ const WEDDING_CONFIG = {
       if (!v.ok) { v.first.focus(); return; }
 
       lastMessage = buildMessage(v.name, v.guests);
-      const mobile = isMobile();
-      const url = waUrl(lastMessage, mobile);
+      const url = waUrl(lastMessage);
 
-      const w = window.open(url, "_blank");           // inside the submit gesture, so it isn't blocked
+      const w = window.open(url, "_blank", "noopener");           // inside the submit gesture, so it isn't blocked
       if (w) { try { w.opener = null; } catch (_) { /* ignore */ } }
 
       $("#waLink").href = `https://wa.me/${C.whatsappNumber}?text=${encodeURIComponent(lastMessage)}`;
